@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     # local-apps 
     'accounts',
     'pages',
+    'tasks',
 ]
 
 MIDDLEWARE = [
