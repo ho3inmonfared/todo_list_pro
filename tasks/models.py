@@ -1,7 +1,12 @@
 from django.db import models
 
 class Category(models.Model):
-    title=models.CharField(max_length=40,unique=True)
+    title = models.CharField(max_length=40, unique=True)
+    color = models.CharField(
+        max_length=20,
+        default='indigo'
+    )
+
     def __str__(self):
         return self.title
     
