@@ -1,0 +1,175 @@
+{% extends "_base.html" %}
+{% block content %}
+<div class="floating-shape"
+    style="width: 250px; height: 250px; background-color: #c084fc; top: -100px; right: -100px;"></div>
+  <div class="floating-shape"
+    style="width: 180px; height: 180px; background-color: #818cf8; bottom: 100px; left: -80px; animation-delay: -4s;">
+  </div>
+  <div class="floating-shape"
+    style="width: 120px; height: 120px; background-color: #f9a8d4; top: 40%; right: 5%; animation-delay: -2s;"></div>
+  <div class="main-content w-full min-h-full px-4 py-8 md:py-12">
+    <div class="max-w-lg mx-auto w-full"><!-- Header -->
+      <div class="header-section text-center mb-8">
+        <div
+          class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 shadow-lg shadow-indigo-500/30 mb-4">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+          </svg>
+        </div>
+        <h1 id="list-title" class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">کارهای امروز</h1>
+        <p class="text-gray-500 text-sm">۳ از ۵ کار انجام شده</p><!-- Progress Bar -->
+        <div class="mt-4 h-2 bg-gray-200 rounded-full overflow-hidden max-w-full">
+          <div class="progress-bar h-full rounded-full" style="width: 60%;"></div>
+        </div>
+      </div><!-- Input Section -->
+      <div class="input-section glass-card rounded-2xl p-4 mb-6 shadow-xl shadow-purple-500/10">
+        <div class="flex gap-3 w-full"><input type="text" placeholder="کار جدید اضافه کنید..."
+            class="input-field flex-1 px-4 py-3 rounded-xl bg-white/50 border border-gray-200 focus:outline-none focus:border-indigo-400 text-gray-700 placeholder-gray-400">
+          <button class="add-btn w-12 h-12 rounded-xl flex items-center justify-center text-white shadow-lg">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg></button>
+        </div><!-- Category Tags -->
+        <div class="flex gap-2 mt-4 flex-wrap"><span
+            class="category-badge px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-600 cursor-pointer hover:bg-indigo-200">🏠
+            خانه</span> <span
+            class="category-badge px-3 py-1 rounded-full text-xs font-medium bg-emerald-100 text-emerald-600 cursor-pointer hover:bg-emerald-200">💼
+            کار</span> <span
+            class="category-badge px-3 py-1 rounded-full text-xs font-medium bg-amber-100 text-amber-600 cursor-pointer hover:bg-amber-200">📚
+            مطالعه</span> <span
+            class="category-badge px-3 py-1 rounded-full text-xs font-medium bg-pink-100 text-pink-600 cursor-pointer hover:bg-pink-200">🏃
+            ورزش</span>
+        </div>
+      </div><!-- Todo List -->
+      <div class="space-y-3"><!-- Todo Item 1 - Completed -->
+        <div class="todo-item glass-card rounded-2xl p-4 shadow-lg shadow-purple-500/5 opacity-0">
+          <div class="flex items-center gap-3 w-full">
+            <div class="checkbox-custom checked w-6 h-6 rounded-lg flex items-center justify-center cursor-pointer">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                stroke-dasharray="24" stroke-dashoffset="0">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <p class="todo-text completed text-gray-400 line-through text-sm md:text-base">پاسخ به ایمیل‌های مهم</p>
+              <div class="flex items-center gap-2 mt-1 flex-wrap"><span class="text-xs text-gray-400">💼 کار</span>
+                <span class="text-xs text-gray-300">•</span> <span class="text-xs text-gray-400">۹:۰۰ صبح</span>
+              </div>
+            </div><button
+              class="delete-btn w-8 h-8 rounded-lg bg-red-50 text-red-400 flex items-center justify-center hover:bg-red-100 transition-colors">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+              </svg></button>
+          </div>
+        </div><!-- Todo Item 2 - Completed -->
+        <div class="todo-item glass-card rounded-2xl p-4 shadow-lg shadow-purple-500/5 opacity-0">
+          <div class="flex items-center gap-3 w-full">
+            <div class="checkbox-custom checked w-6 h-6 rounded-lg flex items-center justify-center cursor-pointer">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <p class="todo-text completed text-gray-400 line-through text-sm md:text-base">خرید مواد غذایی</p>
+              <div class="flex items-center gap-2 mt-1 flex-wrap"><span class="text-xs text-gray-400">🏠 خانه</span>
+                <span class="text-xs text-gray-300">•</span> <span class="text-xs text-gray-400">۱۱:۳۰ صبح</span>
+              </div>
+            </div><button
+              class="delete-btn w-8 h-8 rounded-lg bg-red-50 text-red-400 flex items-center justify-center hover:bg-red-100 transition-colors">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+              </svg></button>
+          </div>
+        </div><!-- Todo Item 3 - Completed -->
+        <div class="todo-item glass-card rounded-2xl p-4 shadow-lg shadow-purple-500/5 opacity-0">
+          <div class="flex items-center gap-3 w-full">
+            <div class="checkbox-custom checked w-6 h-6 rounded-lg flex items-center justify-center cursor-pointer">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <p class="todo-text completed text-gray-400 line-through text-sm md:text-base">تماس با پشتیبانی</p>
+              <div class="flex items-center gap-2 mt-1 flex-wrap"><span class="text-xs text-gray-400">💼 کار</span>
+                <span class="text-xs text-gray-300">•</span> <span class="text-xs text-gray-400">۲:۰۰ بعدازظهر</span>
+              </div>
+            </div><button
+              class="delete-btn w-8 h-8 rounded-lg bg-red-50 text-red-400 flex items-center justify-center hover:bg-red-100 transition-colors">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+              </svg></button>
+          </div>
+        </div><!-- Todo Item 4 - Active with High Priority -->
+        <div
+          class="todo-item glass-card rounded-2xl p-4 shadow-lg shadow-purple-500/5 border-r-4 border-red-400 opacity-0">
+          <div class="flex items-center gap-3 w-full">
+            <div
+              class="checkbox-custom w-6 h-6 rounded-lg border-2 border-gray-300 flex items-center justify-center cursor-pointer hover:border-indigo-400 bg-white">
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 flex-wrap">
+                <p class="todo-text text-gray-700 font-medium text-sm md:text-base">جلسه با تیم طراحی</p><span
+                  class="priority-dot w-2 h-2 rounded-full bg-red-400"></span>
+              </div>
+              <div class="flex items-center gap-2 mt-1 flex-wrap"><span class="text-xs text-gray-500">💼 کار</span>
+                <span class="text-xs text-gray-300">•</span> <span class="text-xs text-red-400 font-medium">۴:۰۰
+                  بعدازظهر</span> <span class="px-2 py-0.5 rounded-full text-xs bg-red-100 text-red-600">فوری</span>
+              </div>
+            </div><button
+              class="delete-btn w-8 h-8 rounded-lg bg-red-50 text-red-400 flex items-center justify-center hover:bg-red-100 transition-colors">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+              </svg></button>
+          </div>
+        </div><!-- Todo Item 5 - Active -->
+        <div class="todo-item glass-card rounded-2xl p-4 shadow-lg shadow-purple-500/5 opacity-0">
+          <div class="flex items-center gap-3 w-full">
+            <div
+              class="checkbox-custom w-6 h-6 rounded-lg border-2 border-gray-300 flex items-center justify-center cursor-pointer hover:border-indigo-400 bg-white">
+            </div>
+            <div class="flex-1 min-w-0">
+              <p class="todo-text text-gray-700 font-medium text-sm md:text-base">۳۰ دقیقه پیاده‌روی</p>
+              <div class="flex items-center gap-2 mt-1 flex-wrap"><span class="text-xs text-gray-500">🏃 ورزش</span>
+                <span class="text-xs text-gray-300">•</span> <span class="text-xs text-gray-500">۶:۰۰ عصر</span>
+              </div>
+            </div><button
+              class="delete-btn w-8 h-8 rounded-lg bg-red-50 text-red-400 flex items-center justify-center hover:bg-red-100 transition-colors">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+              </svg></button>
+          </div>
+        </div>
+      </div><!-- Stats Section -->
+      <div class="mt-8 grid grid-cols-3 gap-3">
+        <div class="glass-card rounded-xl p-4 text-center">
+          <div class="text-2xl font-bold text-indigo-600">
+            ۵
+          </div>
+          <div class="text-xs text-gray-500 mt-1">
+            کل کارها
+          </div>
+        </div>
+        <div class="glass-card rounded-xl p-4 text-center">
+          <div class="text-2xl font-bold text-emerald-600">
+            ۳
+          </div>
+          <div class="text-xs text-gray-500 mt-1">
+            انجام شده
+          </div>
+        </div>
+        <div class="glass-card rounded-xl p-4 text-center">
+          <div class="text-2xl font-bold text-amber-600">
+            ۲
+          </div>
+          <div class="text-xs text-gray-500 mt-1">
+            در انتظار
+          </div>
+        </div>
+      </div>
+{% endblock content %}
